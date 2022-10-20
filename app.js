@@ -361,7 +361,7 @@ function addRadioButton(item, index){
     document.getElementById("radioButtons").appendChild(node);
 }
 
-function followers {
+function followers() {
    for (let i = 0; i < playlist.length, i++) {
     followers[i] = getFollowers(playlist[i]);
    }
