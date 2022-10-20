@@ -9,6 +9,7 @@ var access_token = null;
 var refresh_token = null;
 var currentPlaylist = "";
 var radioButtons = [];
+var followers = [];
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
@@ -358,4 +359,22 @@ function addRadioButton(item, index){
     node.innerText = index;
     node.onclick = function() { onRadioButton( item.deviceId, item.playlistId ) };
     document.getElementById("radioButtons").appendChild(node);
+}
+
+function followers {
+   for (let i = 0; i < playlist.length, i++) {
+    followers[i] = getFollowers(playlist[i]);
+}
+ 
+function getFollowers (playlist) {
+ let i = playlist.length - 1;
+ var scrambledFollowers = [];
+ while (playlist[i] != "(") {
+    scrambledFollowers[i] = playlist[i]; 
+    i--;
+   }
+  unscrambledfollowers = scrambledFollowers.reverse();
+  followers = unscrambledfollowers.parseInt();
+  return followers;
+  }
 }
