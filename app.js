@@ -364,6 +364,7 @@ function addRadioButton(item, index){
 function followers {
    for (let i = 0; i < playlist.length, i++) {
     followers[i] = getFollowers(playlist[i]);
+   }
 }
  
 function getFollowers (playlist) {
