@@ -9,7 +9,7 @@ var access_token = null;
 var refresh_token = null;
 var currentPlaylist = "";
 var radioButtons = [];
-var followers = [];
+var followers = followers();
 
 const AUTHORIZE = "https://accounts.spotify.com/authorize"
 const TOKEN = "https://accounts.spotify.com/api/token";
@@ -362,9 +362,11 @@ function addRadioButton(item, index){
 }
 
 function followers() {
+  var followersTemp = [];
    for (let i = 0; i < playlist.length, i++) {
-    followers[i] = getFollowers(playlist[i]);
+    followersTemp[i] = getFollowers(playlist[i]);
    }
+ return followersTemp;
 }
  
 function getFollowers (playlist) {
